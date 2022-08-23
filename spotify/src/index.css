@@ -1,5 +1,6 @@
 :root{
-  --var-top-color: RGB(228, 187, 189)
+  --var-top-color: RGB(31,31,31);
+  --var-visibility: hidden;
 }
 
 body {
@@ -24,11 +25,98 @@ code {
 .menu{
   background-color: #0C0C0D;
   height: 100vh;
-  width: 15%;
+  min-width: 220px;
 }
 
 .main{
-  background: repeating-linear-gradient(var(--var-top-color), #242528 45vh, #242528 100vh);
+  background: repeating-linear-gradient(var(--var-top-color), RGB(18, 18, 18) 45vh, RGB(18, 18, 18) 100vh);
   height: 100vh;
-  width: 85%;
+  width: 100%;
+}
+.topsix-main{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+.topsix{
+  display: flex;
+  margin-bottom: 15px;
+  margin-left: 21px;
+}
+
+.topsix-image{
+  width: 70px;
+  height: 70px;
+  border-radius: 5px 0 0 5px;
+}
+.topsix-title{
+  background-color: RGBA(28, 28, 28, 0.3);
+  width: 280px;
+  margin-right: 20px;
+  border-radius: 0 5px 5px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 15px;
+
+}
+.topsix-title h3{
+  color: white;
+  font-size: 16px;
+  height: 25px;
+}
+
+.regard{
+  margin-left: 21px;
+  color: White;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.user{
+  position: relative;
+  margin-right: 30px;
+  color: white;
+}
+
+.user-menu{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.user-menu-title{
+  position: relative;
+  display: flex;
+  background-color: RGB(10, 10, 10);
+  top: 20px;
+  border-radius: 50px 50px 50px 50px;
+  width: 130px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+ 
+
+}
+.user-menu-title h4{
+  margin:0;
+  padding-left: 10px;
+  font-size: 13px;
+}
+.user-menu-list{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: RGB(40, 40, 40);
+  padding: 15px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: left;
+  margin-top: 50px;
+  padding-right: 50px;
+}
+
+.user-png{
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 50%;
 }
