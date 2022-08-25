@@ -1,23 +1,23 @@
-import { useState } from "react"
+import omino from "../../assets/omino.png"
+import down from "../../assets/down.png"
 
-let visibility="hidden";
+let visibi="hidden";
 
 const User = () => {
-    const [isHidden, setIsHidden] = useState(false)
-    if(isHidden) visibility="none"
-    console.log(isHidden, visibility)
+    
     return (
         <div className="user-menu">
-            <div className="user-menu-title">
-            <img src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/user.png" className="user-png"/>
-                <h4 onClick={()=>{setIsHidden(true)}}>Steve Jobs</h4>
-                <div className="user-menu-list" style={{visibility: `${visibility}`}}>
-                    <a>Account</a>
-                    <a>Account</a>
-                    <a>Assistenza</a>
-                    <a>Download</a>
-                    <a>Impostazioni</a>
-                </div>
+            <div className="container-img">
+                <img alt="music" src={omino} className="user-png" />
+            </div>
+            <h4>Andrea Lampitelli</h4>
+            <img src={down} alt="down" className="user-down"></img>
+            <div className="user-menu-list" style={{ visibility: `${visibi}` }}>
+                <a>Account</a>
+                <a>Account</a>
+                <a>Assistenza</a>
+                <a>Download</a>
+                <a>Impostazioni</a>
             </div>
         </div>
     )

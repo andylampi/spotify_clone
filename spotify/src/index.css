@@ -1,6 +1,6 @@
 :root{
   --var-top-color: RGB(31,31,31);
-  --var-visibility: hidden;
+  --var-opacity-menu: 0.7;
 }
 
 body {
@@ -11,7 +11,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* div{
+  border: 3px solid white;
+} */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,40 +27,40 @@ code {
 .menu{
   background-color: #0C0C0D;
   height: 100vh;
-  min-width: 220px;
+  min-width: 250px;
 }
 
 .main{
   background: repeating-linear-gradient(var(--var-top-color), RGB(18, 18, 18) 45vh, RGB(18, 18, 18) 100vh);
   height: 100vh;
   width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-width: 400px;
 }
 .topsix-main{
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 
 }
 .topsix{
   display: flex;
   margin-bottom: 15px;
-  margin-left: 21px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0 5px 5px 0;
+  flex-basis:48%;
 }
 
 .topsix-image{
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 100%;
   border-radius: 5px 0 0 5px;
 }
 .topsix-title{
-  background-color: RGBA(28, 28, 28, 0.3);
-  width: 280px;
-  margin-right: 20px;
-  border-radius: 0 5px 5px 0;
-  background-color: rgba(255, 255, 255, 0.1);
   padding-left: 15px;
-
 }
 .topsix-title h3{
   color: white;
@@ -67,7 +69,6 @@ code {
 }
 
 .regard{
-  margin-left: 21px;
   color: White;
   font-size: 32px;
   font-weight: 700;
@@ -75,32 +76,32 @@ code {
 }
 .user{
   position: relative;
-  margin-right: 30px;
   color: white;
 }
 
 .user-menu{
+  width: 100%;
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-top: 20px;
+  height: 30px;
+  margin-left: 15px;
 }
-.user-menu-title{
-  position: relative;
-  display: flex;
-  background-color: RGB(10, 10, 10);
-  top: 20px;
-  border-radius: 50px 50px 50px 50px;
-  width: 130px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  padding-left: 3px;
- 
-
-}
-.user-menu-title h4{
-  margin:0;
-  padding-left: 10px;
+.user-menu h4{
+  margin: 0;
+  background-color: #070B0D;
+  padding-top: 6px;
+  color: white;
   font-size: 13px;
+  padding-left: 35px;
+  padding-right: 30px;
+  border-radius: 50px;
+  width: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
+
 .user-menu-list{
   position: absolute;
   display: flex;
@@ -114,9 +115,114 @@ code {
   padding-right: 50px;
 }
 
+
 .user-png{
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   background-color: grey;
   border-radius: 50%;
 }
+
+.container-img{
+  position: relative;
+  left: 27px;
+  background-color: #070B0D;
+  border-radius: 50px;
+  height: 26px;
+  width: 26px;
+  padding: 2px;
+}
+
+.user-down{
+  position: relative;
+  height: 17px;
+  width: 17px;
+  right: 30px;
+  top: 7px
+}
+
+
+#logo{
+  width: 130px;
+  margin-left: 22px;
+  margin-top: 24px;
+}
+.options{
+  margin-left: 22px;
+  margin-top: 28px;
+}
+.icon{
+  height: 25px;
+}
+.icon-up{
+  opacity: 0.7;
+}
+.list-options{
+  display: flex;
+  color: #ceedeb;
+  margin-bottom: 15px;
+}
+.list-options h4{
+  margin: 0;
+  font-size: 14px;
+  padding-left: 14px;
+  padding-top: 3px;
+  opacity: var(--var-opacity-menu);
+}
+
+.playlist{
+  height: 12px;
+  background-color: #ceedeb;
+  padding: 7px;
+  border-radius: 2px;
+}
+.list-options-other{
+  display: flex;
+  color: #ceedeb;
+  margin-bottom: 15px;
+  opacity: var(--var-opacity-menu);
+}
+.list-options-other h4{
+  margin:0;
+  font-size: 14px;
+  padding-left: 14px;
+  padding-top: 3px;
+}
+.other{
+  margin-top: 50px;
+}
+.heart{
+  height:  12px;
+  background: repeating-linear-gradient(120deg, RGB(96, 79, 159)0px, RGB(96, 79, 159)22px, RGB(255,255,255) 40px, RGB(255,255,255));
+  padding: 7px;
+  border-radius: 2px;
+}
+.bookmark{
+  height:  20px;
+  padding: 3px;
+  background-color: #084637;
+}
+
+.light:hover{
+  --var-opacity-menu: 1;
+}
+.light-title:hover{
+  opacity: 1;
+}
+.divide{
+  height: 1px;
+  width: 210px;
+  background-color: #ceedeb;
+  opacity: 0.2;
+  margin-left: 22px;
+}
+
+@media screen and (min-width: 1200px) {
+  .topsix{
+    flex-basis: 33%;
+  }
+  .topsix-image{
+    width: 16%;
+  }
+}
+
