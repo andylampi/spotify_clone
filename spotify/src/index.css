@@ -234,6 +234,23 @@ code {
   text-decoration: underline;
 }
 
+.mix-prefer{
+  display: flex;
+  color:white;
+}
+.card-music{
+  background-color: white;
+  width: 300px;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.card-music img{
+  width: 180px;
+  padding-left: 17px;
+  padding-top: 10px;
+  border-radius: 20px;
+}
+
 
 
 /*  Media Queries  */

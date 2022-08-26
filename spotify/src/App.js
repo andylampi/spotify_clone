@@ -1,17 +1,21 @@
 import TopSix from "./components/TopSix/index"
-import getMusic from "./utility/getMusic/index";
+import getTopsix from "./utility/getTopsix/index";
+import getPlaylist from "./utility/getPlaylist";
 import { useState } from "react"
 import Load from "./components/Load";
 import Regard from "./components/Regard";
 import User from "./components/user";
 import Logo from "./components/Logo";
 import Options from "./components/Options";
+import Playlist from "./components/Playlist"
 
 
 function App() {
   const path = ["topsix", "playlist"]
-  const [Topsix, setTopSix] = useState(false)
-  const topsix = getMusic(path[0], setTopSix)
+  const [Topsix, setTopsix] = useState(false)
+  const [PlayList, setPlayList] = useState(false)
+  const topsix = getTopsix(path[0], setTopsix)
+  const playlist = getPlaylist(path[1], setPlayList)
   return (
     <div className="principal">
       <div className="menu">
@@ -19,7 +23,7 @@ function App() {
           <Logo />
         </div>
         <div className="options">
-        <Options />
+          <Options />
         </div>
         <div className="divide"></div>
       </div>
@@ -30,19 +34,27 @@ function App() {
         <Regard />
         <div className="topsix-main">
           {
-            Topsix && topsix[0].map(el => {
+            Topsix && topsix.map(el => {
               return <TopSix {...el} key={el.id} idcss={`music-${el.id}`} />
             })
           }
           {
-            !TopSix && <Load />
+            !Topsix && <Load />
           }
         </div>
-        <div>
-          <h3 className="prefer-mix">I tuoi mix preferiti</h3>
-        </div>
-        <div>
-        </div>
+          <div>
+            <h3 className="prefer-mix">I tuoi mix preferiti</h3>
+          </div>
+          <div className="mix-prefer">
+            {
+              PlayList && playlist.map(el => {
+                return <Playlist {...el} key={el.id} idcss={`music-${el.id}`} />
+              })
+            }
+            {
+              !Topsix && <Load />
+            }
+          </div>
       </div>
     </div>
   );
