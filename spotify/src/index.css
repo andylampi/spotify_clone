@@ -14,10 +14,14 @@ body {
 /* div{
   border: 3px solid white;
 } */
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*  Principal */
 
 .principal{
   display: flex;
@@ -38,6 +42,8 @@ code {
   padding-right: 30px;
   min-width: 400px;
 }
+
+ /*  Top six  */
 .topsix-main{
   width: 100%;
   display: flex;
@@ -217,6 +223,21 @@ code {
   margin-left: 22px;
 }
 
+/*  Center  */ 
+
+
+.prefer-mix{
+  color: white;
+  font-size: 24px ;
+}
+.prefer-mix:hover{
+  text-decoration: underline;
+}
+
+
+
+/*  Media Queries  */
+
 @media screen and (min-width: 1200px) {
   .topsix{
     flex-basis: 33%;
@@ -226,3 +247,11 @@ code {
   }
 }
 
+@media screen and (max-width: 1174px){
+  .topsix{
+    height: 65px;
+  }
+  .topsix-image{
+    width: 65px;
+  }
+}

@@ -1,20 +1,19 @@
 import TopSix from "./components/TopSix/index"
-import getMusic from "./utility/getMusic";
+import getMusic from "./utility/getMusic/index";
 import { useState } from "react"
 import Load from "./components/Load";
 import Regard from "./components/Regard";
 import User from "./components/user";
 import Logo from "./components/Logo";
 import Options from "./components/Options";
+import Playlist from "./components/Playlist";
 
-const music = []
 
 function App() {
-  const [Music, setMusic] = useState(false)
-  getMusic().then(mus => {
-    music.push(mus)
-    setMusic(true)
-  })
+  const path = ["topsix", "playlist"]
+  const [Topsix, setTopSix] = useState(false)
+  const [Playlist, setPlaylist] = useState(false)
+  const topsix = getMusic(path[0], setTopSix)
   return (
     <div className="principal">
       <div className="menu">
@@ -33,13 +32,18 @@ function App() {
         <Regard />
         <div className="topsix-main">
           {
-            Music && music[0].map(el => {
+            TopSix && topsix[0].map(el => {
               return <TopSix {...el} key={el.id} idcss={`music-${el.id}`} />
             })
           }
           {
-            !Music && <Load />
+            !TopSix && <Load />
           }
+        </div>
+        <div>
+          <h3 className="prefer-mix">I tuoi mix preferiti</h3>
+        </div>
+        <div>
         </div>
       </div>
     </div>
