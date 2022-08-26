@@ -1,24 +1,24 @@
 
 const lucheroute = (req,res) => {
-    res.sendFile("assets/luche_mix.png", {root: "."})
+    res.sendFile("assets/luche_mix.jpeg", {root: "."})
 }
 const blancomix = (req,res) => {
-    res.sendFile("assets/Blanco_mix.png", {root: "."})
+    res.sendFile("assets/blanco.jpeg", {root: "."})
 }
 const mixallegro = (req,res) => {
-    res.sendFile("assets/Mix_allegro.png", {root: "."})
+    res.sendFile("assets/allegro.jpeg", {root: "."})
 }
 const mixchill = (req,res) => {
-    res.sendFile("assets/Mix_chill.png", {root: "."})
+    res.sendFile("assets/chill.jpeg", {root: "."})
 }
 const mixlatino = (req,res) => {
-    res.sendFile("assets/Mix_latino.png", {root: "."})
+    res.sendFile("assets/latin.jpeg", {root: "."})
 }
 const mixpop = (req,res) => {
-    res.sendFile("assets/Mix_pop.png", {root: "."})
+    res.sendFile("assets/italy.jpeg", {root: "."})
 }
 const paul = (req,res) => {
-    res.sendFile("assets/Paul_Kalkbrenner_mix.png", {root: "."})
+    res.sendFile("assets/paul.jpeg", {root: "."})
 }
 
 

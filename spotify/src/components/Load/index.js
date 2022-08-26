@@ -1,5 +1,5 @@
 const Load = () => {
-    return <h4>Load</h4>
+    return <h4 style={{color: "white"}}>Load</h4>
 }
 
 export default Load
