@@ -6,13 +6,11 @@ import Regard from "./components/Regard";
 import User from "./components/user";
 import Logo from "./components/Logo";
 import Options from "./components/Options";
-import Playlist from "./components/Playlist";
 
 
 function App() {
   const path = ["topsix", "playlist"]
   const [Topsix, setTopSix] = useState(false)
-  const [Playlist, setPlaylist] = useState(false)
   const topsix = getMusic(path[0], setTopSix)
   return (
     <div className="principal">
@@ -32,7 +30,7 @@ function App() {
         <Regard />
         <div className="topsix-main">
           {
-            TopSix && topsix[0].map(el => {
+            Topsix && topsix[0].map(el => {
               return <TopSix {...el} key={el.id} idcss={`music-${el.id}`} />
             })
           }
