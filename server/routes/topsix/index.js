@@ -5,4 +5,12 @@ const topsix = (req,res) => {
     res.send(music)
 }
 
-export default topsix
+
+
+
+const init = (router) => {
+    router.get("/topsix", topsix)
+}
+
+
+export default init

@@ -21,12 +21,15 @@ function App() {
       </div>
       <div className="main">
         <div className="user">
-        <User />
+          <User />
         </div>
         <Regard />
         <Topsix />
-        <div>
-          <h3 className="prefer-mix">I tuoi mix preferiti</h3>
+        <div className="prefer-mix">
+          <h3 >I tuoi mix preferiti</h3>
+          <div>
+            <h5 className="show-all">visualizza tutto</h5>
+          </div>
         </div>
         <Playlist />
       </div>

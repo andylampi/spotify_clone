@@ -229,44 +229,48 @@ code {
 .prefer-mix{
   color: white;
   font-size: 24px ;
-  width: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .prefer-mix:hover{
   text-decoration: underline;
 }
-
+.show-all{
+  color: white;
+  margin: 0;
+  padding-top: 30px;   
+  text-align: right;
+  text-transform: uppercase;
+  color: #B3B3B3;
+  font-size: 20px;
+}
+.show-all:hover{
+  text-decoration: underline;
+}
 .mix-prefer{
-  display: flex;
+  width: 100%;
+  height: 290px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+  overflow-y: hidden;
   color:white;
+  justify-content: space-between;
+  min-width: 450px;
 }
 .card-music{
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   background-color: #171717;
-  width: 300px;
   border-radius: 5px;
-  margin-right: 20px;
 }
 .card-music img{
   width: 180px;
-  border-radius: 5px;
-  margin-left: 15px;
-  margin-top: 13px;
+  padding-left: 20px;
+  padding-top: 10px;
 }
-.card-music span{
-  margin-bottom: 4px;
-  font-size: 14px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 15px;
-  color: #919191;
-}
-.card-music h4{
-  margin: 0;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 10px;
+.card-music-text{
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /*  Media Queries  */
@@ -288,3 +292,4 @@ code {
     width: 65px;
   }
 }
+

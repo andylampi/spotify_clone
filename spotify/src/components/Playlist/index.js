@@ -1,31 +1,30 @@
 import { useEffect, useState } from "react"
-import getDate from "../../utility/getDate"
+import getDate from "../../APIs/getDate"
 import Load from "../Load"
+import Cardplaylist from "./card"
+
 
 const Playlist = () => {
     const [playlist, setPlaylist] = useState()
-    const [load, setLoad] = useState(false)
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         getDate("playlist").then(el => {
             setPlaylist(el)
-            setLoad(true)
+            setLoading(false)
         })
     }, [])
     return (
         <div className="mix-prefer">
             {
-                load && playlist.map(el => {
+                !loading && playlist.map(el => {
+                    let  url_music  = `http://localhost:2000/${el.image}` 
                     return (
-                        <div className="card-music">
-                            <img src={el.image} alt={el.title}></img>
-                            <h4>{el.title}</h4>
-                            <span>{el.some_artist} e altro</span>
-                        </div>
+                       <Cardplaylist {...el} key={el.id} image={url_music}/>
                     )
                 })
             }
             {
-                !load && <Load />
+                loading && <Load />
             }
         </div>
 
